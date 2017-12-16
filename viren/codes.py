@@ -92,7 +92,7 @@
       return x,freq       #Returns the no. with it's corresponding freq
       
     
-    #PROGRAM FOR MEAN
+   #PROGRAM FOR MEAN
     
      def findMean(l)
        sum=0
