@@ -91,5 +91,14 @@
           freq=freq+1     #freq counter is incremented every time a match is found
       return x,freq       #Returns the no. with it's corresponding freq
       
+    
+    #PROGRAM FOR MEAN
+    
+     def findMean(l)
+       sum=0
+       for i in l:
+         sum=sum+i
+       m=sum/len(l)
+       return m
       
       
