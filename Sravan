@@ -1,0 +1,70 @@
+#Linked List implementation
+#Queue & Stack implemented using Linked List
+
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class LinkList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self,newNode):
+        if self.head == None:                         #if no elements exist the newNode becomes the headNode
+            self.head = newNode
+        else:
+            lastNode = self.head
+            while True:
+                if lastNode.next is None:             #iterate till the end of linked list is obtained, the append the newNode
+                    break
+                lastNode = lastNode.next
+            lastNode.next = newNode
+
+    def printlist(self):
+        if self.head is None:
+            print("The list is Empty ")
+        currentNode = self.head
+        while True:
+            print(currentNode.data)
+            if currentNode.next is None:
+                break
+            currentNode = currentNode.next
+
+    def insertHead(self,newNode):
+        oldlist = self.head
+        self.head = newNode
+        self.head.next = oldlist
+
+    def pop(self):
+        lastNode = self.head
+        slastNode = self.head
+        while True:
+            if lastNode.next is None:
+                slastNode.next = None
+                break
+            slastNode = lastNode
+            lastNode = lastNode.next
+
+    def push(self,newNode):
+        self.insertHead(newNode)
+
+
+
+first = Node("Sai")
+llist = LinkList()
+llist.insert(first)
+second = Node("Sravan")
+llist.insert(second)
+third = Node("Munukutla")
+llist.insert(third)
+fourth = Node("Sruti")
+llist.insertHead(fourth)
+llist.printlist()
+print('\n')
+llist.pop()
+llist.printlist()
+print('\n')
+fifth = Node('$')
+llist.push(fifth)
+llist.printlist()
