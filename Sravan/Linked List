@@ -1,5 +1,4 @@
 #Linked List implementation
-#Queue & Stack implemented using Linked List
 
 class Node:
     def __init__(self,data):
@@ -58,7 +57,7 @@ second = Node("Sravan")
 llist.insert(second)
 third = Node("Munukutla")
 llist.insert(third)
-fourth = Node("Sruti")
+fourth = Node("*****")
 llist.insertHead(fourth)
 llist.printlist()
 print('\n')
@@ -68,3 +67,21 @@ print('\n')
 fifth = Node('$')
 llist.push(fifth)
 llist.printlist()
+
+#Output:
+
+*****
+Sai
+Sravan
+Munukutla
+
+
+*****
+Sai
+Sravan
+
+
+$
+*****
+Sai
+Sravan
