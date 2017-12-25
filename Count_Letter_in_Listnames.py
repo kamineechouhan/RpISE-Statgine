@@ -1,7 +1,5 @@
 name = []
 data = ""
-count = 0
-print(range(len(data)))
 
 while data != 'q':
     print('Please enter your name : ')
